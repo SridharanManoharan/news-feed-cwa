@@ -2,6 +2,7 @@ import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import LandingPage from './components/page/landing/landing.page';
 
 ReactDOM.render(
     <Router onUpdate={() => window.scrollTo(0, 0)} >
@@ -9,7 +10,7 @@ ReactDOM.render(
             <Route exact path="/" component={() =>
                 <Redirect to="/landing" />} />
             <Route path="/landing">
-                <Landing />
+                <LandingPage />
             </Route>  
             {/* <Route path="/error">
                 <Error />

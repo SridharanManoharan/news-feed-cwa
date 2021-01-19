@@ -44,15 +44,15 @@ module.exports = {
                 ]
             },
             {
-                test: /\.svg/,
-                use: {
-                    loader: 'svg-url-loader',
-                    options: {}
-                }
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                  name: '[path][name].[hash].[ext]',
+                },
             },
             {
                 test: /\.(jpe?g|png|gif)$/i,
-                use: ['url-loader?limit=10000', 'img-loader']
+                use: ['url-loader?limit=25000', 'img-loader']
             },
             {
                 test: /\.html$/,
