@@ -34,7 +34,7 @@ export const LogoContainer = styled(Link)`
 function HeaderBlock() {
     return(
         <HeaderContainer>
-            <LogoContainer to='#'>
+            <LogoContainer to='/'>
                 <img src={Logo} alt='Logo' />
                 <span>BT - News Feed Application</span>
             </LogoContainer>
