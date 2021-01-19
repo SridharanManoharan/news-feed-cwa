@@ -5,6 +5,11 @@ html {
   line-height: 1.4;
 }
 
+body {
+  color: #333333;
+  background-color: rgb(245, 245, 245);
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * Customize the background color to match your design.

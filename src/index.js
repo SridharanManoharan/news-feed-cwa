@@ -1,6 +1,7 @@
 import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/style.css';
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/page/landing/landing.page';
 
