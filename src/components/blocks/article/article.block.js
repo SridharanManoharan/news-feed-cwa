@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ArticleWrapper = styled.div`
-    max-width: 500px;
     padding: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -15,10 +14,16 @@ const TextContainer = styled.span`
     }
 `;
 
+const ImageContainer = styled.img`
+    display: block;
+    max-width: 100%;
+`;
+
 function ArticleBlock ({ data }) {
 
     return (
         <ArticleWrapper>
+            <ImageContainer src={data.urlToImage} />
             <h2>{data.title}</h2>
             <hr/>
             <p>{data.description}</p>

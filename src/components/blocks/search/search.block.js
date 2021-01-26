@@ -112,10 +112,10 @@ function SearchBlock() {
         let errorMessage = false;
         if (value.toString().trim().length > 0) {
             try {
-                const re = /^[a-zA-Z ]*$/;
+                const re = /^[a-zA-Z0-9 ]*$/;
                 if (!re.test(value)) {
                     setIsValid(false)
-                    setErrorMsg('Only letters are allowed in search field');
+                    setErrorMsg('Only letter, number and space are allowed in search field');
                 } else {
                     setErrorMsg('');
                     retrieveTelephoneDetails();
@@ -150,10 +150,10 @@ function SearchBlock() {
 
     const handleKeyPress = (e) => {
         try {
-            const re = /^[a-zA-Z ]*$/;
+            const re = /^[a-zA-Z0-9 ]*$/;
             if (!re.test(e.key)) {
                 setIsValid(false);
-                setErrorMsg('Only letters are allowed in search field');
+                setErrorMsg('Only letter, number and space are allowed in search field');
                 e.preventDefault();
             } else {
                 setIsValid(true);

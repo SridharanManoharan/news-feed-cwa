@@ -5,9 +5,17 @@ html {
   line-height: 1.4;
 }
 
+@font-face {
+  font-family: "CalibriRegular";
+  src: local("CalibriRegular"),
+    url("../assets/fonts/Calibri\ Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
+  font-family: "CalibriRegular";
   color: #333333;
-  background-color: rgb(245, 245, 245);
+  background-color: #ffffff;
   margin: 0 auto;
 }
 

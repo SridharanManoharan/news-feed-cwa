@@ -44,6 +44,15 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(ttf|eot|woff|woff2|otf)$/,
+                use: {
+                  loader: 'url-loader',
+                  options: {
+                    name: 'fonts/[name].[ext]'
+                  }
+                }
+            },
+            {
                 test: /\.(jpg|png|svg)$/,
                 loader: 'file-loader',
                 options: {

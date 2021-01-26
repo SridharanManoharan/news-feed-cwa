@@ -43,6 +43,15 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(ttf|eot|woff|woff2|otf)$/,
+                use: {
+                  loader: 'url-loader',
+                  options: {
+                    name: 'fonts/[name].[ext]'
+                  }
+                }
+            },
+            {
                 test: /\.svg/,
                 use: {
                     loader: 'svg-url-loader',

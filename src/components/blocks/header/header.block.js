@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Logo from '../../../assets/BT_logo.svg';
+import Logo from '../../../assets/images/BT_logo.svg';
 
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  background-color: #333333;
+  background-color: #5514b4;
   position: sticky;
   top: 0;
 `;
 
 export const LogoContainer = styled(Link)`
   padding: 20px 0px 20px 15px;
-  font-family: Calibri;
   font-size: 25px;
   text-decoration: none;
   color: #ffffff;
@@ -36,7 +35,7 @@ function HeaderBlock() {
         <HeaderContainer>
             <LogoContainer to='/'>
                 <img src={Logo} alt='Logo' />
-                <span>BT - News Feed Application</span>
+                <span>News Feed Application</span>
             </LogoContainer>
         </HeaderContainer>
     );

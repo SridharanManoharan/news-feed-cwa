@@ -6,13 +6,12 @@ import ArticleBlock from '../article/article.block';
 const GridContainer = styled.div`
     margin: 50px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: .5rem;
-    @media (max-width: 1100px) {
-        grid-template-columns: 1fr 1fr;
-    }
-    @media (max-width: 650px) {
-        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    --auto-grid-min-size: 24rem;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    @media (max-width: 480px) {
+        --auto-grid-min-size: 16rem;
+        grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     }
 `;
 
