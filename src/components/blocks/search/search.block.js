@@ -20,9 +20,8 @@ const InputContainer = styled.input`
     padding:10px;
     margin:10px 10px 10px 0;
     max-width: 200px;
-    border:0; // remove default border
-    border: 2px solid ${props => props.color};
-    border-radius:10px;
+    border: solid 1px ${props => props.color};
+    border-radius:0.4em;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     font-family:inherit;
     font-size: inherit;
@@ -42,7 +41,7 @@ const ButtonContainer = styled.button`
     padding:0.80em 2.5em;
     border:0.1em solid #FFFFFF;
     margin:0 0.3em 0.3em 0;
-    border-radius:2em;
+    border-radius:0.6em;
     box-sizing: border-box;
     text-decoration:none;
     text-decoration:none;
@@ -52,9 +51,9 @@ const ButtonContainer = styled.button`
     text-align:center;
     transition: all 0.2s;
     cursor: pointer;
-    background: #333333;
-    :hover{
-        background-color:#4c4949;
+    background: #6400aa;
+    :hover{ 
+        background-color:#520f82;
     }
     @media (max-width: 480px) {
         display: block;
@@ -172,7 +171,7 @@ function SearchBlock() {
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
-                    color={isValid ? '#b9b9b9' : 'red'}
+                    color={isValid ? '#666' : 'red'}
                     onKeyPress={handleKeyPress}
                     isValid={isValid}
                     placeholder='search'/>
