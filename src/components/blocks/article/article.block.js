@@ -5,6 +5,7 @@ const ArticleWrapper = styled.div`
     padding: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
+    background: #f3f8fd;
 `;
 
 const TextContainer = styled.span`
@@ -16,7 +17,8 @@ const TextContainer = styled.span`
 
 const ImageContainer = styled.img`
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 15rem;
 `;
 
 function ArticleBlock ({ data }) {

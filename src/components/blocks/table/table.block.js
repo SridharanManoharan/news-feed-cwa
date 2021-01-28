@@ -7,9 +7,12 @@ const GridContainer = styled.div`
     margin: 50px auto;
     display: grid;
     grid-gap: 1rem;
-    --auto-grid-min-size: 24rem;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    @media only screen and (max-width: 820px) {
+        --auto-grid-min-size: 20rem;
+        grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    }
+    @media only screen and (max-width: 480px) {
         --auto-grid-min-size: 16rem;
         grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     }
@@ -29,9 +32,9 @@ function TableBlock() {
     const { state } = useContext(InitialContext);
 
     return (
-        <div>
+        <>
             {(state.retrieveStatus && state.data.length > 0) && 
-            (<GridContainer>
+            (<GridContainer role="grid">
                 {state.data.map((elem, index) => 
                     <ArticleBlock key={'article' + index} data={elem} />
                 )}
@@ -39,7 +42,7 @@ function TableBlock() {
             {(state.retrieveStatus && state.data.length === 0) && (
                 <NoDataContainer><p>No search result found for the {state.query}</p></NoDataContainer>
             )}
-        </div>
+        </>
     );
 }
 
