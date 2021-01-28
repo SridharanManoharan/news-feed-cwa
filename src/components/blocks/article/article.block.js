@@ -19,6 +19,7 @@ const ImageContainer = styled.img`
     display: block;
     width: 100%;
     height: 15rem;
+    border: 0.5px solid gainsboro;
 `;
 
 function ArticleBlock ({ data }) {
